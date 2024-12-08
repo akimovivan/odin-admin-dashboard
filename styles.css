@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --sidebar-bg: blue;
+    --header-bg: white;
+    --main-bg: gray;
+}
+.wrapper {
+    display: grid;
+    grid: [row1-start] "sidebar header" 1fr [row1-end]
+          [row2-start] "sidebar main"   6fr [row2-end]
+          / 1fr 5fr;
+    height: 100vh;
+}
+
+nav {
+    grid-area: sidebar;
+    background-color: var(--sidebar-bg);
+}
+
+header {
+    grid-area: header;
+    background-color: var(--header-bg);
+}
+
+main {
+    grid-area: main;
+    background-color: var(--main-bg);
+}
