@@ -7,9 +7,14 @@
 }
 
 :root {
+    /* TODO: change color pallete */
     --sidebar-bg: blue;
     --header-bg: white;
     --main-bg: gray;
+    --card-outline-clr: orange;
+    --small-icon-size: 30px;
+    --small-avatar-size: 40px;
+    --bigger-avatar-size: 50px;
 }
 .wrapper {
     display: grid;
@@ -27,9 +32,49 @@ nav {
 header {
     grid-area: header;
     background-color: var(--header-bg);
+    padding: 1rem 3rem;
+
+    display: grid;
+    grid-template: 2fr 3fr / 2fr 1fr;
 }
+
 
 main {
     grid-area: main;
     background-color: var(--main-bg);
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.header--account {
+    display: flex;
+    gap: 1rem;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.search-bar {
+    flex-grow: 2;
+}
+
+.small-icon {
+    height: var(--small-icon-size);
+}
+
+.small-avatar {
+    height: var(--small-avatar-size);
+}
+
+.hello > img {
+    height:var(--bigger-avatar-size);
+    float: left;
+    margin: 0 1rem 0 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
