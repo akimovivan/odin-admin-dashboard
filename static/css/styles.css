@@ -15,6 +15,7 @@
     --small-icon-size: 30px;
     --small-avatar-size: 40px;
     --bigger-avatar-size: 50px;
+    --sidebar-text-clr: white;
 }
 .wrapper {
     display: grid;
@@ -27,6 +28,12 @@
 nav {
     grid-area: sidebar;
     background-color: var(--sidebar-bg);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+    color: var(--sidebar-text-clr);
 }
 
 header {
@@ -77,4 +84,37 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+nav > h1 {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: white;
+}
+
+h1 > img {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(343deg) brightness(107%) contrast(101%);
+}
+
+nav .small-icon {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(343deg) brightness(107%) contrast(101%);
+}
+
+ul {
+    list-style: none
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sidebar-links li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
