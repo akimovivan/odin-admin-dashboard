@@ -8,19 +8,21 @@
 
 :root {
     /* TODO: change color pallete */
-    --sidebar-bg: blue;
+    --sidebar-bg: #1992d4;
     --header-bg: white;
-    --main-bg: gray;
-    --card-outline-clr: orange;
+    --main-bg: #E2E8F0
+    --card-outline-clr:#F0B429;
     --small-icon-size: 30px;
     --small-avatar-size: 40px;
     --bigger-avatar-size: 50px;
     --sidebar-text-clr: white;
+    --search-bg: #E2E8F0;
+    --main-button-clr: #1992D4;
 }
 .wrapper {
     display: grid;
     grid: [row1-start] "sidebar header" 1fr [row1-end]
-          [row2-start] "sidebar main"   6fr [row2-end]
+          [row2-start] "sidebar main"   5fr [row2-end]
           / 1fr 5fr;
     height: 100vh;
 }
@@ -57,13 +59,24 @@ main {
 
 .header--account {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
+
+.header--account > p {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
 
 .search-bar {
     flex-grow: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
 .small-icon {
@@ -72,6 +85,19 @@ main {
 
 .small-avatar {
     height: var(--small-avatar-size);
+}
+
+.hello {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hello > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .hello > img {
@@ -84,8 +110,18 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 2rem;
 }
 
+button {
+    flex: 1;
+    background-color: var(--main-button-clr);
+    color: white;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 1rem;
+    height: 40%;
+}
 nav > h1 {
     display: flex;
     align-items: center;
@@ -150,4 +186,13 @@ article > *:first-child {
 
 .trend {
     background-color: skyblue;
+}
+
+input[type="search"] {
+    background-color: var(--search-bg);
+    border: none;
+    width: 80%;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }
