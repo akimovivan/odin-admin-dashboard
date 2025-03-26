@@ -12,6 +12,7 @@
     --header-bg: white;
     --main-bg: #E2E8F0;
     --card-outline-clr: #F0B429;
+    --card-bg: white;
     --small-icon-size: 30px;
     --small-avatar-size: 40px;
     --bigger-avatar-size: 50px;
@@ -164,7 +165,6 @@ main {
 
 article {
     grid-area: 1 / 1 / 3 / 2;
-    /*background-color: yellow;*/
 }
 
 article > *:first-child {
@@ -178,16 +178,38 @@ article > *:first-child {
     gap: 1rem;
 }
 
-.card-wrapper > div {
-    border: 1px solid black;
+.announce {
+    display: flex;
+    flex-direction: column;
+    /*padding: 0.5rem;*/
+    padding-top: 0.5rem;
+    gap: 1rem;
 }
 
-.announce {
-    background-color: magenta;
+.announce > :last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+    background-color: var(--card-bg); 
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.announce p {
+    color: gray;
+    font-size: 0.95rem;
+}
+
+hr {
+    border: 1px dashed gray;
 }
 
 .trend {
-    background-color: skyblue;
+    /*background-color: skyblue;*/
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 input[type="search"] {
@@ -210,7 +232,8 @@ input[type="search"] {
     gap: 0.5rem;
     padding: 2rem;
     box-shadow: 10px 0px 0px var(--card-outline-clr) inset;
-    background-color: white;
+    background-color: var(--card-bg);
+    border-radius: 10px;
 }
 
 .card > .icons {
@@ -218,4 +241,32 @@ input[type="search"] {
     justify-content: flex-end;
     align-items: flex-end;
     gap: 1rem;
+}
+
+.trending-users {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    flex-grow: 1;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.user {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user > div {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.34rem;
+}
+
+.user > div > :last-child {
+    color: gray;
 }
